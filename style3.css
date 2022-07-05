@@ -73,6 +73,7 @@ a{
     font-family: sans-serif;
     font-weight: bold;
     text-decoration: underline;
+    font-style: italic;
 }
 
 .card p{
@@ -185,3 +186,9 @@ a{
     }
 }
 
+
+
+.incubation{
+    padding-left: 2em;
+    padding-right: 2em;
+}

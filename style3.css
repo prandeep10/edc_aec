@@ -122,6 +122,9 @@ a{
     text-decoration: underline;
     text-decoration-color: rgb(97, 97, 97);
     text-underline-offset: 4px;
+        padding-left: 10px;
+    padding-right: 10px;
+
   }
   
   
@@ -136,6 +139,9 @@ a{
     text-decoration: underline;
     text-decoration-color: rgb(77, 77, 77);
     text-underline-offset: 4px;
+        padding-left: 10px;
+    padding-right: 10px;
+
   }
   
   

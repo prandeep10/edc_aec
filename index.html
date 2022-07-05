@@ -7,9 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 </head>
 
 <body class="
@@ -86,8 +85,15 @@
 
   <div class="md:w-1/2 p-4 mb-10 md:mb-0">
 
-    <h1 class="text-white font-bold text-2xl md:text-5xl mb-4">Entrepreneurship Development Cell</h1>
+    <h1 class="text-white font-bold text-2xl md:text-5xl mb-4" data-aos="fade-up">Entrepreneurship Development Cell</h1>
     <p> Entrepreneurship Development Cell of Assam Engineering College 2021-22</p>
+
+   
+     <a href="description.html">
+       <button class="btn"> Know More </button>
+     </a>
+     
+   
 
   </div>
 
@@ -95,7 +101,7 @@
   <div class='md:w-1/2 flex items-center justify-center'>
     
     <img src="https://source.unsplash.com/1000x700/?entrepreneurship,business,money" class="w-full shadow-2xl rounded"
-      alt="LOGO" />
+      alt="LOGO" data-aos="fade-up" />
   </div>
 
 
@@ -104,7 +110,7 @@
 
 
 <!-- Our Work : Flip-Cards -->
-  <h1 class="heading"> Our Work </h1>
+  <h1 class="heading" data-aos="fade-up"> Our Work </h1>
 
   <div class="services">
     <!-- flip-card-container -->
@@ -393,23 +399,23 @@
   <h1 class="heading">Our Services</h1>
   <div id="slider">  
   <div class="slides">  
-    <img src="https://hhsbanner.com/wp-content/uploads/2019/03/victoria_falls-900x300.jpg" width="100%" />
+    <img src="workshop.jpg" width="100%" />
    </div>
     
     <div class="slides">  
-    <img src="https://blog.cognifit.com/wp-content/uploads/2019/11/hiking-900x300.jpg" width="100%" />
+    <img src="talks.jpg" width="100%" />
   </div>
     
     <div class="slides">  
-    <img src="https://travelfree.info/wp-content/uploads/2018/02/croatia-waterfall-in-deep-forest-of-Cr-12755165-900x300.jpg" width="100%" />
+    <img src="competition.jpg" width="100%" />
   </div> 
     
      <div class="slides">  
-    <img src="https://www.piemonturismo.it/site/wp-content/uploads/2014/07/13-laghi-grande.jpg" width="100%" />
+    <img src="networking.jpg" />
   </div> 
     
   <div class="slides">  
-    <img src="https://improvephotography.com/wp-content/uploads/2017/09/Julian-Baird-20170914-3-900px.jpg" width="100%" />
+    <img src="competition.jpg" width="100%" />
   </div>  
     
     <div id="dot"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
@@ -492,6 +498,13 @@
   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset : 400,
+        duration : 1000
+      });
+    </script>
 
 
 

@@ -8,6 +8,7 @@
   <title>Home</title>
   <link rel="stylesheet" href="style2.css">
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
  
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 </head>
@@ -87,12 +88,12 @@
 <section class="text-gray-600 body-font">
     <div class="container mx-auto flex px-5 pt-14 py-10 md:flex-row flex-col items-center">
       <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-        <img class="object-cover object-center rounded" alt="hero" src="https://source.unsplash.com/720x600/?entrepreneurship,business">
+        <img class="object-cover object-center rounded" alt="hero" src="https://source.unsplash.com/720x600/?entrepreneurship,business" data-aos="fade-up">
       </div>
       <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">About Us
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900" data-aos="fade-up">About Us
         </h1>
-        <p class="mb-8 leading-relaxed">At EDC, we understand and believe that this fast changing and evolving era is the perfect time to live in and step-up to shape our future by looking at the world as our playground! So, aiming to promote the spirit of entrepreneurship amongst the IITG community as well as the youth of the North-East India, we host various workshops, lectures, innovative games, brainstorming sessions, competitions which provide a complete learning experience to the attendees and fill them with the zeal to change their monotonous lives!</p>
+        <p class="mb-8 leading-relaxed" data-aos="fade-up">At EDC, we understand and believe that this fast changing and evolving era is the perfect time to live in and step-up to shape our future by looking at the world as our playground! So, aiming to promote the spirit of entrepreneurship amongst the IITG community as well as the youth of the North-East India, we host various workshops, lectures, innovative games, brainstorming sessions, competitions which provide a complete learning experience to the attendees and fill them with the zeal to change their monotonous lives!</p>
       </div>
     </div>
   </section>
@@ -259,6 +260,14 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset : 400,
+        duration : 1000
+      });
+    </script>
 
 
 

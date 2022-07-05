@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', serif;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    background: #f9f9f9;
+}
+
+
+p{
+    font-family: sans-serif;
+    line-height: 1.7em;
+    word-spacing: 0.03em;
+    text-align: left;
+
+}
+
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.main-header{
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.main-header h1{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.main-header h1 span{
+    color: red;
+}
+
+.main-header p {
+    font-size: 2rem;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    background: rgb(235, 235, 235);
+    margin-bottom: 2rem;
+}
+
+.card h3{
+    margin-bottom: 1.5rem;
+    font-family: cursive;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.card p{
+    font-family: cursive
+}
+
+.card img{
+    height: 400px;
+}
+
+.card > div{
+    padding: 2rem;
+}
+
+
+.card:nth-child(even) img{
+    order: 2;
+}
+
+.btn{
+    display: inline-block;
+    background: black;
+    padding: 0.8rem 1.8rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.btn:hover{opacity: 0.8;}
+
+
+@media(max-width : 700px) {
+    .card {
+        display : block;   
+    }
+}
+
+
+.heading {
+    font-size: 3em;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 1em;
+    color: rgb(0, 0, 0);
+    padding-bottom: 0.4em;
+    font-family: cursive;
+    text-decoration: underline;
+    text-decoration-color: rgb(97, 97, 97);
+    text-underline-offset: 4px;
+  }
+  
+  
+  .heading2 {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 1em;
+    color: rgb(2, 2, 2);
+    padding-bottom: 0.4em;
+    font-family: cursive;
+    text-decoration: underline;
+    text-decoration-color: rgb(77, 77, 77);
+    text-underline-offset: 4px;
+  }
+  
+  
+
+.description {
+    padding: 2em;
+}
+
+
+
+  .description img{
+    display: flex;
+
+  }
+
+  .description p {
+    background-color: white;
+  }
+
+
+@media(max-width : 700px) {
+    p {
+        display : block; 
+        text-align: center;  
+    }
+}

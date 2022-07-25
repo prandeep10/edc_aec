@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 @keyframes fade {
   from {
     opacity: 0.4;
@@ -14,6 +15,56 @@
   }
 }
 
+
+
+.spinner-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff6347;
+  z-index: 999999;
+  }
+
+
+
+  .spinner {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    position: absolute;
+    top: 48%;
+    left: 48%;
+  
+    margin: 100px auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+  }
+  
+  @-webkit-keyframes sk-rotateplane {
+    0% { -webkit-transform: perspective(120px) }
+    50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+    100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+  }
+  
+  @keyframes sk-rotateplane {
+    0% { 
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+      -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+    } 50% { 
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+      -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+    } 100% { 
+      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+  }
+
+
+
+
+
 html{
   scroll-behavior: smooth;
 }
@@ -23,15 +74,7 @@ html{
 
 
 .bg {
-  animation: slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, rgb(0, 7, 70) 50%, rgb(0, 4, 255) 50%);
-  bottom: 0;
-  left: -50%;
-  opacity: .5;
-  position: fixed;
-  right: -50%;
-  top: 0;
-  z-index: -1;
+background: url(https://source.unsplash.com/320x700/?incubation);
 }
 
 .bg2 {
@@ -91,9 +134,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  background: linear-gradient(-45deg, #100881, #5718e9, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  background: url(dark.jpeg);
   height: 100vh;
 }
 
@@ -1199,7 +1240,7 @@ $color_grey_dark: #a2a2a2;
 
 .btn{
     display: inline-block;
-    background: black;
+    background: blueviolet;
     padding: 0.8rem 1.8rem;
     margin-top: 2rem;
     cursor: pointer;
@@ -1214,3 +1255,145 @@ $color_grey_dark: #a2a2a2;
     width: 100%;
   }
 }
+
+
+
+
+
+
+$squarew: 15px;
+$squareh: 15px;
+$squaremargin: 5px;
+$loaderw: $squarew * 3 + $squaremargin *2;
+$loaderh: $squareh * 3 + $squaremargin *2;
+$delayenter: 0.3s;
+$topenter: -10px;
+
+@mixin transition($value) {
+  -webkit-transition: $value ;
+   -moz-transition: $value ;
+          transition: $value ;
+}
+
+@mixin delay( $delay ) {
+  -webkit-animation-delay: $delay;
+   -moz-animation-delay: $delay;
+  animation-delay: $delay;
+}
+@-webkit-keyframes enter{
+  0%   { 
+    opacity: 0;
+    top: $topenter;
+  }
+  5%   { 
+    opacity: 1;
+    top: 0px;
+  }
+  50.9% { 
+    opacity: 1;
+    top: 0px;
+  }
+  55.9% { 
+    opacity: 0;
+    top: - $topenter;
+  }
+}
+@keyframes enter{
+  0%   { 
+    opacity: 0;
+    top: $topenter;
+  }
+  5%   { 
+    opacity: 1;
+    top: 0px;
+  }
+  50.9% { 
+    opacity: 1;
+    top: 0px;
+  }
+  55.9% { 
+    opacity: 0;
+    top: - $topenter;
+  }
+}
+@-moz-keyframes enter{
+  0%   { 
+    opacity: 0;
+    top: $topenter;
+  }
+  5%   { 
+    opacity: 1;
+    top: 0px;
+  }
+  50.9% { 
+    opacity: 1;
+    top: 0px;
+  }
+  55.9% { 
+    opacity: 0;
+    top: - $topenter;
+  }
+}
+
+
+
+
+#loading{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: - $loaderw / 2;
+  margin-top: - $loaderh / 2;
+}
+.square{
+  background: white;
+  width: $squarew;
+  height: $squareh;
+  float: left;
+  top: $topenter;
+  margin-right: $squaremargin;
+  margin-top: $squaremargin;
+  position:relative;
+  opacity: 0;
+  -webkit-animation: enter 6s infinite;
+  animation: enter 6s infinite;
+}
+.enter{
+  top: 0px;
+  opacity: 1;
+}
+.square:nth-child(1){
+  @include delay(6 * $delayenter);
+}
+.square:nth-child(2){
+ @include delay(7 * $delayenter);
+}
+.square:nth-child(3){
+  @include delay(8 * $delayenter);
+  background: #fdc96f;
+}
+.square:nth-child(4){
+  @include delay(3 * $delayenter);
+}
+.square:nth-child(5){
+  @include delay(4 * $delayenter);
+}
+.square:nth-child(6){
+  @include delay(5 * $delayenter);
+}
+.square:nth-child(7){
+  }
+.square:nth-child(8){
+  @include delay(1 * $delayenter);
+}
+.square:nth-child(9){
+  @include delay(2 * $delayenter);
+}
+.clear{
+  clear: both;
+ }
+.last{
+   margin-right:0;
+}
+
+

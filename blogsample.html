@@ -15,7 +15,9 @@
 <body class="
       antialiased">
 
-
+      <div class="spinner-wrapper">
+        <div class="spinner"></div>
+        </div>
 
 
 
@@ -171,7 +173,18 @@ We organise various workshops on conceptualising, launching and running a busine
   </footer>
 
 
-
+  <script>
+    $(document).ready(function() {
+    //Preloader
+    preloaderFadeOutTime = 500;
+    function hidePreloader() {
+    var preloader = $('.spinner-wrapper');
+    preloader.fadeOut(preloaderFadeOutTime);
+    }
+    hidePreloader();
+    });
+    </script>
+  
 
 </body>
 

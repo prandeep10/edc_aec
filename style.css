@@ -134,7 +134,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  background: url(dark.jpg);
+  background: url(dark.jpeg);
   height: 100vh;
 }
 
